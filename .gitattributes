@@ -1,2 +1,9 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+# Only ship the addons folder in the Asset Library ZIP.
+# Everything else (project.godot, docs, README, this file...) is omitted from
+# the archive users download, so it can never overwrite their own project.
+/**        export-ignore
+/addons    !export-ignore
+/addons/** !export-ignore
